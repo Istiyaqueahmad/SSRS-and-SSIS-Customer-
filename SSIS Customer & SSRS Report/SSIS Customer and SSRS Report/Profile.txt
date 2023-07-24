@@ -1,0 +1,1044 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{AD1E82D2-F7DE-46F5-B555-D095E1BA66A7}" Name="Profile.txt">
+      <DtsConnectionManagerID>Profile.txt</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}" Name="WIN-H8UQ1E4NSCN.CustomerDataWareHouse">
+      <DtsConnectionManagerID>WIN-H8UQ1E4NSCN.CustomerDataWareHouse</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table Schema="dbo" Table="SQlprofilingdata" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table Schema="dbo" Table="SQlprofilingdata" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table Schema="dbo" Table="SQlprofilingdata" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table Schema="dbo" Table="SQlprofilingdata" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table Schema="dbo" Table="SQlprofilingdata" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table Schema="dbo" Table="SQlprofilingdata" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>2</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Email Adress" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="D O B" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Salary" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="CountryCode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="EMP Code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Dept Code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Country" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="CountryTaxcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="TaxPercentage" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Pan card" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>4</MinLength>
+        <MaxLength>6</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Email Adress" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>13</MinLength>
+        <MaxLength>22</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="D O B" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>8</MinLength>
+        <MaxLength>9</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>10</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Salary" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>4</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>10</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="CountryCode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>3</MinLength>
+        <MaxLength>5</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>10</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="EMP Code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>4</MinLength>
+        <MaxLength>4</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Dept Code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>4</MinLength>
+        <MaxLength>4</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Country" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>5</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="CountryTaxcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>3</MinLength>
+        <MaxLength>3</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="TaxPercentage" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>1</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Pan card" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>4</MinLength>
+        <MaxLength>4</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>9</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Ajay</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dinesh</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Kumar</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Neeraj</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Raju</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>sharma</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Shiv</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Vishal</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Yadav</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <KeyColumns>
+          <Column Name="Email Adress" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Email Adress" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>11</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>ajay@yahoo.in</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>dinesh@yahoo.com</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>kumar@gmail.in</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>neerajyahoo.com</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>raju123@gmail.com</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>shaam@yahoo.com</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>sharma@yahoo.com</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>shiv_koirala@yahoo.com</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>suraj@yahoo.com</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>vishal@gmail.in</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>yadavgmail.in</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <KeyColumns>
+          <Column Name="D O B" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="D O B" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>11</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>1/1/1900</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>11/2/1975</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2/19/1973</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3/12/1980</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3/16/1988</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3/26/1976</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4/16/1971</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5/22/1986</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6/24/1978</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>8/13/1983</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>9/24/1977</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Salary" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>8</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>0</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1000</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1500</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2000</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3000</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5000</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6000</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>8000</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="CountryCode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>IND</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>India</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NEP</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>USA</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="EMP Code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>9</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>AGYP</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AMDK</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AQPR</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E001</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E002</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E003</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E004</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E005</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>E006</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Dept Code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>8</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>D001</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D002</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D003</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D004</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D005</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D006</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>D007</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DOO8</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Country" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>America</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>India</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Indian</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Nepal</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="CountryTaxcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>3</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>IND</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NEP</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>USA</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="TaxPercentage" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>3</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6</Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <KeyColumns>
+          <Column Name="Pan card" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Pan card" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>11</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>P001</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>P002</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>P003</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>P004</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>P005</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>P006</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>P007</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>P008</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>P009</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>P010</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>P011</Value>
+            <Count>1</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>NEERAJ</RegexText>
+            <Frequency>11</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SHARMA</RegexText>
+            <Frequency>11</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>VISHAL</RegexText>
+            <Frequency>11</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>DINESH</RegexText>
+            <Frequency>11</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>YADAV</RegexText>
+            <Frequency>11</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>KUMAR</RegexText>
+            <Frequency>11</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SHIV</RegexText>
+            <Frequency>11</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>AJAY</RegexText>
+            <Frequency>11</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>RAJU</RegexText>
+            <Frequency>11</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Email Adress" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>NEERAJYAHOO.COM</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>YADAVGMAIL.IN</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SHIV_KOIRALA@YAHOO.COM</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>RAJU123@GMAIL.COM</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SHARMA@YAHOO.COM</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>DINESH@YAHOO.COM</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SURAJ@YAHOO.COM</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SHAAM@YAHOO.COM</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>VISHAL@GMAIL.IN</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>.*</RegexText>
+            <Frequency>18</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="D O B" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\d/\d\d/\d\d\d\d</RegexText>
+            <Frequency>82</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\d\d/\d/\d\d\d\d</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\d/\d/\d\d\d\d</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Salary" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\d000</RegexText>
+            <Frequency>82</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>1500</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>0</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="CountryCode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>IND</RegexText>
+            <Frequency>55</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>USA</RegexText>
+            <Frequency>27</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>INDIA</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>NEP</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="EMP Code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>E00\d</RegexText>
+            <Frequency>73</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>AGYP</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>AMDK</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>AQPR</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Dept Code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>D00\d</RegexText>
+            <Frequency>91</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>DOO8</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Country" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>AMERICA</RegexText>
+            <Frequency>45</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>INDIA</RegexText>
+            <Frequency>27</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>INDIAN</RegexText>
+            <Frequency>18</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>NEPAL</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="CountryTaxcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>IND</RegexText>
+            <Frequency>64</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>USA</RegexText>
+            <Frequency>27</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>NEP</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="TaxPercentage" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>5</RegexText>
+            <Frequency>64</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>6</RegexText>
+            <Frequency>27</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>2</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{20887915-0E31-467B-B5CD-ECD4C6EEBB0B}</DataSourceID>
+        <Table DataSource="WIN-H8UQ1E4NSCN" Database="CustomerDataWareHouse" Schema="dbo" Table="SQlprofilingdata" RowCount="11" />
+        <Column Name="Pan card" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>P0\d\d</RegexText>
+            <Frequency>100</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
